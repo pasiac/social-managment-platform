@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    ],
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
 }
 
 INSTALLED_APPS = [
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'campaign',
 ]
 
 MIDDLEWARE = [
